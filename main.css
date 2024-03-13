@@ -1,0 +1,217 @@
+:root {
+    /*Brand colors*/
+    --color-provincial-pink: #dfd7d6;
+
+    /*Base Colors*/
+    --color-white: #FFF;
+    --color-black: #000;
+
+    /*colors*/
+    --color-primary: #96418c;
+    --color-secondary: #376392ce;
+    --color-secondary-highlinght: #A675A1;
+    --color-font-base: #071F47;
+    --color-font-base-highlinght: #385993;
+    --color-font-inverted: #f5f5f5;
+
+    /*backgrounds*/
+    --background-primary: #F2F4F9;
+
+    /* Font sizes*/
+    --font-size-base: 10px;
+    --font-size-sm: 1.2rem; 
+    --font-size-md: 1.6rem; 
+    --font-size-lg: 2.5rem; 
+    --font-size-xl: 3rem;
+}
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background-primary);
+    font-size: var(--font-size-base);
+    color: var(--color-font-base);
+   
+}
+p{
+    color: var(--color-font-base-highlinght);
+    font-size: var(--font-size-md);
+    margin: 20px 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+    scroll-snap-type: y mandatory;
+}
+.container .is-short{
+    min-height: auto;
+}
+.is-column{
+    flex-direction: column;
+}
+
+
+/*Hero Sections*/
+.hero-content{
+    max-width: 200%;
+}
+.hero {
+    background: url("./assets/images/photo.png") no-repeat;
+    background-size: 850px;
+    background-position: calc(100% + 250px) 80px;
+    border-bottom: 5px solid var(--color-primary);
+    height: calc(100vh - 30px);
+}
+.hero.container{
+    min-height: auto;
+}
+.section{
+    overflow: hidden;
+    padding: 20px 30px;
+}
+.biography-tittle{
+    margin-right: 50px;
+}
+.biography{
+    background-color: var(--color-provincial-pink);
+}
+.expertise {
+    background-color: var(--color-secondary);
+}
+.expertise-item{
+    margin-bottom: 20px;
+}
+.expertise-item.has-cards{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+
+/*Tittle*/
+.tittle {
+    font-size: var(--font-size-xl);
+    line-height: 1.10;
+    margin-right: 50px;
+}
+.subtitle{
+    font-size: var(--font-size-md);
+    margin-right: 50px;
+}
+.tittle span {
+    color: var(--color-primary);
+}
+.tittle strong{
+    display: inline-block;
+    font-size: var(--font-size-lg);
+    margin-top: 20px;
+    line-height: 1;
+}
+.tittle.is-inverted{
+    color: var(--color-font-inverted);
+}
+p.is-inverted{
+    color: var(--color-font-inverted);
+    opacity: 0.8;
+}
+/*Cards Expertise*/
+.card{
+    position: relative;
+    background-color: var(--color-white);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 5px 12px 0 rgba(0, 0, 0, 2);
+    width: 220px;
+}
+.card h1,
+.card h2,
+.card p{
+    position: relative;
+}
+.card p{
+    color: var(--color-font-inverted);
+    text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 12px;
+    opacity: 0.28;
+}
+.card .tittle{
+    text-shadow: -1px -1px 0 #f8f8f8;
+}
+.card.javascript{
+    background: linear-gradient(-45deg, #d69e2e 0%, #f1da58 100%);
+}
+.card.javascript::before{
+    background: url(./assets/logos/javascript.svg) no-repeat;
+    background-size: 100%;
+    background-position: calc(100% + 40px) calc(100% + 40px); 
+}
+.card.html-css::before{
+    background: url(./assets/logos/html.svg) no-repeat;
+    background-size: 100%;
+    background-position: calc(100% + 40px) calc(100% + 40px); 
+}
+.card.react::before{
+    background: url(./assets/logos/react.svg) no-repeat;
+    background-size: 100%;
+    background-position: calc(100% + 40px) calc(100% + 40px); 
+}
+.card.html-css{
+    background: linear-gradient(-45deg, #dd6b20 0%, #f6ad55 100%);
+}
+.card.react{
+    background: linear-gradient(-45deg, #3182c3 0%, #63b3ed 100%);
+}
+/*Contac Form*/
+.button{
+    padding: 20px 30px;
+    border: 1px solid transparent;
+    background: var(--color-primary);
+    color: var(--color-font-inverted);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.footer{
+    padding: 5px 10px;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+.footer p{
+    color: var(--color-font-inverted);
+}
+
+@media(max-width: 600px){
+    .hero{
+        background: none;
+    }
+    .biography .container{
+        flex-direction: column;
+    }
+    .button{
+        width: 100%;
+    }
+    .expertise-item.has-cards{
+        display: flex;
+        flex-direction: column;
+    }
+}
