@@ -77,7 +77,7 @@ p{
 }
 .section{
     overflow: hidden;
-    padding: 20px 30px;
+    padding: 50px 30px;
 }
 .biography-tittle{
     margin-right: 50px;
@@ -119,9 +119,16 @@ p{
 .tittle.is-inverted{
     color: var(--color-font-inverted);
 }
+.tittle.is-letf{
+    text-align: left;
+}
 p.is-inverted{
     color: var(--color-font-inverted);
     opacity: 0.8;
+}
+/*Contact formulario*/
+.contact{
+    background-color: var(--color-primary);
 }
 /*Cards Expertise*/
 .card{
