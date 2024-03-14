@@ -79,6 +79,9 @@ p{
     overflow: hidden;
     padding: 50px 30px;
 }
+.section.no-padding-bottom{
+    padding-bottom: 0;
+}
 .biography-tittle{
     margin-right: 50px;
 }
@@ -126,10 +129,34 @@ p.is-inverted{
     color: var(--color-font-inverted);
     opacity: 0.8;
 }
+
 /*Contact formulario*/
 .contact{
     background-color: var(--color-primary);
 }
+.form-container{
+    background-color: var(--color-provincial-pink);
+    max-width: 400px;
+    width: 100%;
+    padding: 30px;
+}
+.contact-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+textarea{
+    resize: vertical;
+}
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid transparent;
+}
+label{
+    font-size: var(--font-size-md);
+}
+
 /*Cards Expertise*/
 .card{
     position: relative;
@@ -186,7 +213,7 @@ p.is-inverted{
 .card.react{
     background: linear-gradient(-45deg, #3182c3 0%, #63b3ed 100%);
 }
-/*Contac Form*/
+/*Contact Form*/
 .button{
     padding: 20px 30px;
     border: 1px solid transparent;
@@ -219,6 +246,9 @@ p.is-inverted{
     }
     .expertise-item.has-cards{
         display: flex;
+        flex-direction: column;
+    }
+    .contact-container{
         flex-direction: column;
     }
 }
