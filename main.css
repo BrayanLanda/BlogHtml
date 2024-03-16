@@ -156,6 +156,10 @@ fieldset{
 label{
     font-size: var(--font-size-md);
 }
+input{
+    padding: 10px 20px;
+    border: 1px solid var(--color-primary);
+}
 
 /*Cards Expertise*/
 .card{
